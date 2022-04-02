@@ -1,1 +1,52 @@
-<p>actualizar works!</p>
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Actualizar datos de Empleado</h3>
+  <form (ngSubmit)="onSubmit()" #empleadoForm = "ngForm">
+  <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)] = "empleado.nombre" name="nombre"
+      required placeholder="Digite su nombre" #nombre="ngModel">
+      <div class="alert alert-danger" *ngIf= "nombre.invalid && (nombre.dirty || nombre.touched)">
+          <div *ngIf = "nombre.errors.required">
+            Digite su nombre por favor
+          </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <label>Puesto</label>
+      <input type="text" class="form-control" id="puesto" [(ngModel)] = "empleado.puesto" name="puesto" required placeholder="Digite el puesto" #puesto="ngModel">
+      <div class="alert alert-danger" *ngIf= "puesto.invalid && (puesto.dirty || puesto.touched)">
+          <div *ngIf = "puesto.errors.required">
+            Digite el puesto por favor
+          </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <label>Nombre Vacuna</label>
+      <input type="text" class="form-control" id="nombreVacuna" [(ngModel)] = "empleado.nombreVacuna" name="nombreVacuna" required placeholder="Digite el nombre de la vacuna" #nombreVacuna="ngModel">
+      <div class="alert alert-danger" *ngIf= "nombreVacuna.invalid && (nombreVacuna.dirty || nombreVacuna.touched)">
+          <div *ngIf = "nombreVacuna.errors.required">
+            Digite el nombre de la Vacuna por favor
+          </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <label>Fecha de Primera Dosis</label>
+      <input type="text" class="form-control" id="fechaPrimeraDosis" [(ngModel)] = "empleado.fechaPrimeraDosis" name="fechaPrimeraDosis" required placeholder="Digite Fecha de la primera dosis" #fechaPrimeraDosis="ngModel">
+      <div class="alert alert-danger" *ngIf= "fechaPrimeraDosis.invalid && (fechaPrimeraDosis.dirty || fechaPrimeraDosis.touched)">
+          <div *ngIf = "fechaPrimeraDosis.errors.required">
+            Digite la fecha de la primera dosis por favor
+          </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <label>Fecha de Segunda Dosis</label>
+      <input type="text" class="form-control" id="fechaSegundaDosis" [(ngModel)] = "empleado.fechaSegundaDosis" name="fechaSegundaDosis" required placeholder="Digite Fecha de la segunda dosis" #fechaSegundaDosis="ngModel">
+      <div class="alert alert-danger" *ngIf= "fechaSegundaDosis.invalid && (fechaSegundaDosis.dirty || fechaSegundaDosis.touched)">
+          <div *ngIf = "fechaSegundaDosis.errors.required">
+            Digite la fecha de la segunda dosis por favor
+          </div>
+        </div>
+  </div>
+  <button class="btn btn-success" [disabled]="!empleadoForm.form.valid">Guardar</button>
+  </form>
+</div>
