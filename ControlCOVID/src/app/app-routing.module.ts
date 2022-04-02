@@ -12,7 +12,7 @@ path:'Mostrar',component:MostrarComponent
 path:'Agregar',component:AgregarComponent
 },
 {
-path:'Actualizar',component:ActualizarComponent
+path:'Actualizar/:id',component:ActualizarComponent
 }
 ];
 
