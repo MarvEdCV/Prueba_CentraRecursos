@@ -4,7 +4,10 @@
  */
 package com.example.Backend_Spring.modelo;
 
+import java.util.Date;
 import javax.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 /**
  *
@@ -31,17 +34,21 @@ public class Empleado {
     @Column(name = "nombrevacuna",nullable=false)
     private String Nombrevacuna;
     
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     @Column(name = "fechaprimeradosis",nullable=false)
-    private String Fechaprimeradosis;
+    private Date Fechaprimeradosis;
     
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     @Column(name = "fechasegundadosis")
-    private String Fechasegundadosis;
+    private Date Fechasegundadosis;
     
     //Creamos los constructores.
     public Empleado() {
 
     }
-    public Empleado(Long id, String Nombre, String Puesto, String NombreVacuna, String FechaPrimeraDosis, String FechaSegundaDosis) {
+    public Empleado(Long id, String Nombre, String Puesto, String NombreVacuna, Date FechaPrimeraDosis, Date FechaSegundaDosis) {
         this.id = id;
         this.Nombre = Nombre;
         this.Puesto = Puesto;
@@ -82,19 +89,19 @@ public class Empleado {
         this.Nombrevacuna = NombreVacuna;
     }
 
-    public String getFechaPrimeraDosis() {
+    public Date getFechaPrimeraDosis() {
         return Fechaprimeradosis;
     }
 
-    public void setFechaPrimeraDosis(String FechaPrimeraDosis) {
+    public void setFechaPrimeraDosis(Date FechaPrimeraDosis) {
         this.Fechaprimeradosis = FechaPrimeraDosis;
     }
 
-    public String getFechaSegundaDosis() {
+    public Date getFechaSegundaDosis() {
         return Fechasegundadosis;
     }
 
-    public void setFechaSegundaDosis(String FechaSegundaDosis) {
+    public void setFechaSegundaDosis(Date FechaSegundaDosis) {
         this.Fechasegundadosis = FechaSegundaDosis;
     }
 

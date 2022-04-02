@@ -39,7 +39,7 @@
     </div>
     <div class="form-group">
         <label>Fecha de Primera Dosis</label>
-        <input type="text" class="form-control" id="fechaPrimeraDosis" [(ngModel)] = "empleado.fechaPrimeraDosis" name="fechaPrimeraDosis" required placeholder="Digite Fecha de la primera dosis" #fechaPrimeraDosis="ngModel">
+        <input type="date" class="form-control" id="fechaPrimeraDosis" [(ngModel)] = "empleado.fechaPrimeraDosis" name="fechaPrimeraDosis" required placeholder="Digite Fecha de la primera dosis" #fechaPrimeraDosis="ngModel">
         <div class="alert alert-danger" *ngIf= "fechaPrimeraDosis.invalid && (fechaPrimeraDosis.dirty || fechaPrimeraDosis.touched)">
             <div *ngIf = "fechaPrimeraDosis.errors.required">
               Digite la fecha de la primera dosis por favor
@@ -48,7 +48,7 @@
     </div>
     <div class="form-group">
         <label>Fecha de Segunda Dosis</label>
-        <input type="text" class="form-control" id="fechaSegundaDosis" [(ngModel)] = "empleado.fechaSegundaDosis" name="fechaSegundaDosis" required placeholder="Digite Fecha de la segunda dosis" #fechaSegundaDosis="ngModel">
+        <input type="date" class="form-control" id="fechaSegundaDosis" [(ngModel)] = "empleado.fechaSegundaDosis" name="fechaSegundaDosis" required placeholder="Digite Fecha de la segunda dosis" #fechaSegundaDosis="ngModel">
         <div class="alert alert-danger" *ngIf= "fechaSegundaDosis.invalid && (fechaSegundaDosis.dirty || fechaSegundaDosis.touched)">
             <div *ngIf = "fechaSegundaDosis.errors.required">
               Digite la fecha de la segunda dosis por favor
