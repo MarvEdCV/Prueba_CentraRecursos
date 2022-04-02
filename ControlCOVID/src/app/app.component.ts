@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ControlCOVID';
+  title = 'Control COVID-19 ';
 
   constructor(private router:Router){}
 
