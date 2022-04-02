@@ -22,7 +22,14 @@
   </div>
   <div class="form-group">
       <label>Nombre Vacuna</label>
-      <input type="text" class="form-control" id="nombreVacuna" [(ngModel)] = "empleado.nombreVacuna" name="nombreVacuna" required placeholder="Digite el nombre de la vacuna" #nombreVacuna="ngModel">
+      <select type="text" class="form-select" id="nombreVacuna" [(ngModel)] = "empleado.nombreVacuna" name="nombreVacuna" required placeholder="Escoja el nombre de la vacuna" #nombreVacuna="ngModel">
+        <option value="Sputnik V">Sputnik V</option>
+        <option value="Moderna">Moderna</option>
+        <option value="Sinopharm">Sinopharm</option>
+        <option value="AstraZeneca">AstraZeneca</option>
+        <option value="Pfizer">Pfizer</option>
+        <option value="Janssen">Janssen</option>          
+      </select>
       <div class="alert alert-danger" *ngIf= "nombreVacuna.invalid && (nombreVacuna.dirty || nombreVacuna.touched)">
           <div *ngIf = "nombreVacuna.errors.required">
             Digite el nombre de la Vacuna por favor
