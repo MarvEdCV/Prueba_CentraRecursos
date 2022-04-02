@@ -1,7 +1,8 @@
 export class Empleado {
-    name:String;
-    position:String;
-    vaccineName:String;
-    Date1:String;
-    Date2:String;
+    id:number;
+    nombre:String;
+    puesto:String;
+    nombreVacuna:String;
+    fechaPrimeraDosis:String;
+    fechaSegundaDosis:String;
 }
