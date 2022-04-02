@@ -1,1 +1,38 @@
-<p>mostrar works!</p>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Registro Empleados</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Identificador</th> 
+                        <th>Nombre</th>
+                        <th>Puesto Laboral</th>
+                        <th>Nombre Vacuna</th>
+                        <th>Fecha Primera Dosis</th>
+                        <th>Fecha Segunda Dosis</th>
+                        <th>Estado de Vacunación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center" *ngFor="let empleado of Empleados ">
+                        <td>{{empleado.id}}</td> 
+                        <td>{{empleado.nombre}}</td>
+                        <td>{{empleado.puesto}}</td> 
+                        <td>{{empleado.nombreVacuna}}</td> 
+                        <td>{{empleado.fechaPrimeraDosis}}</td> 
+                        <td>{{empleado.fechaSegundaDosis}}</td> 
+                        <td>Pendiente</td> 
+                        <td>
+                            <button (click)= "actualizarEmpleado(empleado.id)" class="btn btn-info">Actualizar</button>
+                            <button (click)= "eliminarEmpleado(empleado.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                        </td>
+                    </tr>     
+                </tbody>
+            </table>    
+        </div>
+    </div>
+</div>
