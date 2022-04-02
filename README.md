@@ -27,5 +27,5 @@ Para este proyecto se utilizó el IDE Apache Netbeans 13, en el cual al instalar
 
 
 Cuando ya tengas los dos proyectos funcionando significa que la API en Spring Java ya esta funcionando para comunicarse con la Base de datos de MS SQL SERVER y Angular ya esta preparado para solicitar todos los consumos creados en la API.
-# DESARROLLADOR
+## DESARROLLADOR
 ***Marvin Eduardo Catalán Véliz*** 
